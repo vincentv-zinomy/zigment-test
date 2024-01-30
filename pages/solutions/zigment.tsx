@@ -1,10 +1,19 @@
+import img3 from "@/assets/images/solutions/features/CostEfficiency.svg";
+import img2 from "@/assets/images/solutions/features/InstantEngagement.svg";
+import img4 from "@/assets/images/solutions/features/Omnichannel.svg";
+import img5 from "@/assets/images/solutions/features/Tailored Interaction.svg";
 import line from "@/assets/images/solutions/hero/line-shape-1.svg";
+import img15 from "@/assets/images/solutions/howworks/InitialOnboarding.svg";
+import img16 from "@/assets/images/solutions/howworks/Integrationprocess.svg";
+import img17 from "@/assets/images/solutions/howworks/SeeMagicinRealtime.svg";
 import instant from "@/assets/images/solutions/whatwedo/Instant.svg";
 import reduce from "@/assets/images/solutions/whatwedo/ReduceHumanCapital.svg";
 import alwaysOn from "@/assets/images/solutions/whatwedo/alwaysOn.svg";
 import LandingPageLayout from "@/components/Layout/LandingPageLayout";
+import MetaTagsComponents from "@/components/common/MetaTagsComponents";
 import ChatBotFeaturesSection from "@/components/solutions/ChatBotFeaturesSection";
 import ComparisionSection from "@/components/solutions/ComparisionSection";
+import CustomHero from "@/components/solutions/CustomHero";
 import EmphasisSection from "@/components/solutions/EmphasisSection";
 import Faq from "@/components/solutions/Faq";
 import Features from "@/components/solutions/Features";
@@ -12,17 +21,6 @@ import HowWorksSections from "@/components/solutions/HowWorksSections";
 import IntegrationsSections from "@/components/solutions/IntegrationsSections";
 import TestimonySection from "@/components/solutions/TestimonySection";
 import WhatWeDo from "@/components/solutions/WhatweDo";
-import { useRouter } from "next/router";
-import img2 from "@/assets/images/solutions/features/InstantEngagement.svg";
-import img4 from "@/assets/images/solutions/features/Omnichannel.svg";
-import img5 from "@/assets/images/solutions/features/Tailored Interaction.svg";
-import img3 from "@/assets/images/solutions/features/CostEfficiency.svg";
-import img15 from "@/assets/images/solutions/howworks/InitialOnboarding.svg";
-import img16 from "@/assets/images/solutions/howworks/Integrationprocess.svg";
-import img17 from "@/assets/images/solutions/howworks/SeeMagicinRealtime.svg";
-import MetaTagsComponents from "@/components/common/MetaTagsComponents";
-import CustomHero from "@/components/solutions/CustomHero";
-import OurSolutionSection from "@/components/solutions/OurSolutionSection";
 import { testimonies } from "@/lib/testimonial";
 import Image from "next/image";
 import Link from "next/link";
@@ -53,7 +51,7 @@ const features = [
     id: 1,
     title: "Instant Engagement ",
     para: "Zigment uses AI to engage your leads instantly, so they never go cold. Remember, a warm lead is a future customer.",
-    img: img2,
+    img: img2, // You should replace img2 with the actual image source or variable.
   },
   {
     id: 2,
@@ -75,6 +73,7 @@ const features = [
   },
 ];
 
+ 
 const comparisionFeatures = [
   {
     id: 1,
@@ -95,13 +94,13 @@ const comparisionFeatures = [
       "Zigment improves with every interaction; conventional tools just repeat themselves.",
   },
   {
-    id: 4,
+    id: 3,
     name: "Easy Integration vs. Complicated Set-Up",
     description:
       "One click and you're ready with Zigment, as opposed to a maze of configurations elsewhere.",
   },
   {
-    id: 5,
+    id: 3,
     name: "Cost-Effectiveness vs. Human Resources",
     description: "Why burn payroll when you can achieve more for less?",
   },
@@ -149,53 +148,48 @@ const chatbotFeatures = [
   },
 ];
 
-export default function Home() {
-  const router = useRouter();
+export default function zigment() {
   return (
     <>
       <LandingPageLayout>
-        <MetaTagsComponents
-          title={"Zigment AI Lead Management – Revolutionize Lead Engagement"}
+       
+        <MetaTagsComponents 
+          title={"Zigment AI Lead Management – Revolutionize Lead Engagement"} 
           description="Revolutionize your lead management with Zigment's AI-driven platform, designed to automate and optimize lead engagement and conversion processes efficiently."
-          keywords={
-            "Zigment, Lead Management, AI Lead Conversion, Automated Lead Engagement, Efficient Lead Processing, Lead Nurturing AI, Conversion Optimization"
-          }
-        />
-
+          keywords={"Zigment, Lead Management, AI Lead Conversion, Automated Lead Engagement, Efficient Lead Processing, Lead Nurturing AI, Conversion Optimization"}
+        /> 
         <main className="relative  ">
           <CustomHero>
-            <h1 className="text-4xl font-black text-gray-900 sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl  leading-tight">
+          <h1 className="text-4xl font-black text-gray-900 sm:text-5xl lg:text-6xl   leading-tight">
               <div className="relative leading-tight">
-                <p className="block xl:inline ">Conversational AI </p>{" "}
+                <p className="block xl:inline ">Automate Lead </p>{" "}
                 <Image
                   src={line}
                   alt=""
-                  className="absolute w-[300px] inset-x-0 mx-auto lg:m-0 lg:w-[480px] -bottom-3 lg:-bottom-5 "
+                  className="absolute w-[280px] mx-auto inset-x-0 md:w-[360px] lg:left-0 lg:right-full lg:w-[450px] md:-bottom-4 -bottom-3 "
                 />
               </div>
-              <span className="block  leading-tight">Platform For </span>
-              <span className="block  leading-tight">Sales Optimization</span>
+              <span className="block   xl:inline leading-tight">
+              Conversion With AI
+              </span>
             </h1>
             <div className="mt-2 lg:mt-10  ">
-              <div className="rounded-md w-full flex items-center relative justify-center lg:justify-start">
-                <Link
-                  href={"/contactus"}
-                  className="inline-block  bg-brand-orange-deski hover:bg-red-500 rounded-md right-2 text-white font-medium sm:font-semibold px-4 sm:px-8   sm:py-3 py-2 text-sm sm:text-base"
-                >
-                  Schedule A Demo
-                </Link>
-              </div>
-              <div className="mx-auto max-w-7xl   py-4">
-                <h2 className="lg:text-left text-lg font-semibold text-center leading-8 text-gray-900">
-                  Integrated with
-                  <span className="text-brand-orange-deski text-3xl">
-                    {" "}
-                    100+{" "}
-                  </span>
-                  popular CRMs
-                </h2>
-              </div>
+            <div className="rounded-md w-full flex items-center relative justify-center lg:justify-start">
+            <Link
+                href={"/contactus?utm_source=organic&utm_campaign=hero_button_zigment"}
+                className="inline-block  bg-brand-orange-deski hover:bg-red-500 rounded-md right-2 text-white font-medium sm:font-semibold px-4 sm:px-8   sm:py-3 py-2 text-sm sm:text-base"
+              >
+                Schedule A Demo
+              </Link>
             </div>
+            <div className="mx-auto max-w-7xl   py-4">
+              <h2 className="lg:text-left text-lg font-semibold text-center leading-8 text-gray-900">
+                Integrated with
+                <span className="text-brand-orange-deski text-3xl"> 100+ </span>
+                popular CRMs
+              </h2>
+            </div>
+          </div>
           </CustomHero>
           <WhatWeDo data={whatwedo} />
           <Features contents={features}>
@@ -208,7 +202,6 @@ export default function Home() {
               />
             </h2>
           </Features>
-          <OurSolutionSection />
           <EmphasisSection
             heading={`Each moment a lead waits, its value depreciates. Don't let your leads go cold, heat them up instantly with Zigment.
             `}
